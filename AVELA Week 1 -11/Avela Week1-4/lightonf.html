@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>Bulb on/off
+<script>
+    function light(stage){
+        var pic;
+        if(stage==0){
+            pic = "off.gif";
+        }
+        else{
+            pic = "on.gif";
+        }
+        document.getElementById('bulb').src = pic;
+    }
+</script>
+</head>
+<body>
+<h1>BULB on/off</h1>
+<p>
+    <button type="button" onclick="light(0)">Light Off</button>
+<img id="bulb" src="on.gif" width="100px" height="180px">
+    <button type="button" onclick="light(1)">Light On</button>
+</p>
+</body>
+</html>

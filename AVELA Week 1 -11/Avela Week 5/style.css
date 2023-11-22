@@ -1,0 +1,214 @@
+/* 
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Equinox", sans-serif;
+  }
+  body {
+    background-color: #0ab985;
+  }
+  /*origin w=640,h=400
+  absolute position
+  */
+  /*
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    these create the illusion of 3d and the shadows when you open card
+    transition: 1s;
+    Whats the purpose of these ones?
+    */
+  /*
+  */
+  .card {
+    width: 700px;
+    height: 450px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+  }
+  /*origin was -5deg, this is the angle that determines the circle the 
+  card will do before it opens.
+  Do 360 for the card to make a circle before it opens
+  */
+  .card:hover {
+    transform: rotate(360deg);
+  }
+  /*-origin = -130, this is what dtermines how wide th card opens
+  If I get rid of the Y the page with the cake covering moves only
+  And it will go around in circles
+  You can make it -160 to completely open it.
+  */
+  .card:hover .outside {
+    transform: rotateY(-130deg);
+  }
+  /*This arranges the papers to become the shape of a card*/
+  .outside,
+  .inside {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+  }
+
+  .inside {
+    /*Background = this creates the back white page
+    line height looks at the spacing between the two sentences
+    to right decides where majority of page without shadow would be
+    the first color changes the shadow and the second colro change
+    the color of the page
+    */
+    background: linear-gradient(to right, #f6f3f3, #f4f4f4 30%);
+    line-height: 2;
+    padding:0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+  }
+  /*z-index: 1; this if deleted the page becomes blank again*/
+  .outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+  }
+  /*I dont know why we need both -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; But if both is deleted we will get  
+    A white front cover with no words
+  */
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+  }
+  /*this hides the inside, making the front page white/green*/
+  .front {
+    background-color: #399037;
+  }
+  /*this shows how the page will open I believe
+  It also kinda decideds how the shadow would look
+  Y places the shadow in the center of the two pages
+  */
+  .back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e2dede, #ffffff 30%);
+  }
+  /*Just decide where the image of the cake would be on the card*/
+  .cake {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+  }
+  /*This makes the cake that has 4 layers*/
+  .top-layer,
+  .top-layer-2,
+  .middle-layer,
+  .bottom-layer {
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    /*This makes the middle icing in each layer*/
+    background-image: linear-gradient(
+        transparent 50px,
+        #62276d 50px,
+        #e75757 60px,
+        transparent 60px
+      ),
+      /*This changes the design of the icing on top of every layer*/
+      radial-gradient(circle at 30px -1px, pink 21px, #923369 31px);
+      /*This designes how the corner of the cake would look*/
+      border-radius: 10% 10% 0% 0%;
+    position: relative;
+    margin: auto;
+  }
+  /*top controls how the stack of cake layers are aligned*/
+  .middle-layer {
+    transform: scale(0.85);
+    top: 6px;
+  }
+  .top-layer {
+    transform: scale(0.7);
+    top: 26px;
+  }
+  .top-layer-2 {
+    transform: scale(0.55);
+    top: 56px;
+  }
+  /**/
+  .candle {
+    height: 45px;
+    width: 15px;
+    /*the first calue start the stripes, secodn the background of candle
+    the third thickens the stripes and the fourth value does the background*/
+    background: repeating-linear-gradient(    
+      45deg,
+      #460732 3px,
+      #e1d3d9 5px,
+      #d3f88d 5px,
+      #e6171a 10px
+    );
+    /*the bottom controls how much above the layers of cake the candle is 
+    origin =202px
+    */
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 246px;
+  }
+  /*creates the flame in the candle
+  when the border radius is 0 we make a square, when given 
+  value we make the flame,bottom determines how above the candle flame is 
+   transform: rotate decides where the pointy part of the flame is pointing
+  left: -1px; is just to center it more
+  content: ""; this part brings about the space we paste the code to see change????
+   */
+  .candle:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #e8a62a;
+    border-radius: 0 50% 50% 50%;
+    bottom: 46px;
+    transform: rotate(45deg);
+    left: -1px;
+  }
+  /*Make the happy birthday sign all uppercased
+  with a font size, makes written at the center of the page
+  looks at the space between each letter and the color of the 
+  text.
+  */
+  .outside p {
+    font-size: 23px;
+    text-transform: Uppercase;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 6px;
+    color: #3636b7;
+  }
+  /*Deals  with the spcing between the box and the words*/
+  .inside h1 {
+    font-size: 150px;
+    line-height: 150px;
+  }

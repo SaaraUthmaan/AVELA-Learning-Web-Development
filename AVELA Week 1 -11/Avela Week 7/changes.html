@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background: linear-gradient(to left, green, purple, rgb(21, 21, 182));
+            }
+
+        </style>
+    </head>
+<body>
+
+<h2>JavaScript switch</h2>
+
+<p id="dem"></p>
+<p id="diff"></p>
+<p id="prac1"></p>
+<p id="prac2"></p>
+<p id="prac3"></p>
+<p id="prac4"></p>
+<p id="prac5"></p>
+
+<script>
+let me = "pretty"
+switch (me){
+case "pretty":
+    text = "You are pretty!";
+    break;
+case "handsome":
+    text = "You are handsome!";
+    break;
+  default:
+    text = "I don't know how you look.";
+}
+document.getElementById(id="dem").innerHTML = "Today you look very differnt. " ;
+document.getElementById(id="diff").innerHTML = text ;
+</script>
+<script>
+let text = "";
+for (let i = 1; i < 10; i++) {
+  if (i === 4) { break; }
+  text += i + "<br>";
+}
+document.getElementById("prac1").innerHTML = "You have three seconds to turn ugly" + "<br>" + "NOW!";
+document.getElementById("prac2").innerHTML = text;
+</script>
+
+<script>
+    let advice = "sad"
+    switch (advice){
+    case "enraged":
+        advice = "Don't blame others when you are in the wrong.";
+        break;
+    case "happy":
+        advice = "Go on, move that smiling face away from me.";   
+        break;
+    default:
+        advice = "Why dont you run along and find a purpose in life.";     
+
+    }
+document.getElementById("prac3").innerHTML = advice;
+</script>
+
+<script>
+    let life = "";
+    let us = "";
+    for (let i = 0; i < 10; i++) {
+      if (i === 4) { continue; }
+      life += "What will be the missing number? " + i + "<br>";
+    }
+    for(let j = 1; j < 11; j++){
+        us += "<span style='font-size: " + (j * 2) + 
+        "px;'> Remember, reading is a gateway to knowledge </span><br>";
+    }
+    document.getElementById("prac4").innerHTML = us;
+    document.getElementById("prac5").innerHTML = life;
+    </script>
+
+</body>
+</html>

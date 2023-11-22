@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           body{
+            background: linear-gradient(to right, #187ea0,#d243e2, #4de88e, rgb(50, 122, 30)); 
+           }
+           table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100px;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid rgb(27, 54, 43);
+            border-radius: 30px;
+            padding: 30px;/*What makes the table bigger*/
+            text-align: center;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: hsl(0, 63%, 40%);
+        }
+        td {
+            background-color: hsl(0, 66%, 38%);
+        }
+
+        td:hover,th:hover {
+            background-color: hsl(266, 72%, 47%); /* Change color on hover */
+            color: rgb(220, 23, 191); /* Change text color on hover */
+        }
+        
+        caption {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        </style>
+
+    </head>
+<body>
+<div class="cal"></div>
+<h1>First Attempt at making Calender</h1>
+<p>What is the date today?</p>
+<p id="date"></p>
+<script>
+const date = new Date();
+document.getElementById("date").innerHTML = date.toDateString();
+</script>
+<script>
+function showTomorrow() {
+const date = new Date(2023, 07, 05);
+document.getElementById("Tomdate").innerHTML = date.toDateString();
+}
+function showTomorrow1() {
+const date = new Date(2023, 07, 01);
+document.getElementById("aug1").innerHTML = date.toDateString();
+}
+function showTomorrow2() {
+const date = new Date(2023, 07, 02);
+document.getElementById("aug2").innerHTML = date.toDateString();
+}
+function showTomorrow3() {
+const date = new Date(2023, 07, 03);
+document.getElementById("aug3").innerHTML = date.toDateString();
+}
+/*HAVING TROUBLE MAKE IT RETURN TO ORIGINAL
+function hideTomorrow1() {
+document.getElementById("aug1").style.display = date;
+}
+*/
+</script>
+<p onclick="showTomorrow()">What day is tomorrow?</p>
+<p id="Tomdate"></p>
+<table>
+    <caption>Days in August</caption>
+    <thead>
+        <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="aug1"onmouseover="showTomorrow1()">1</td>
+            <td id="aug2"onmouseover="showTomorrow2()">2</td>
+            <td id="aug3" onmouseover="showTomorrow3()">3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

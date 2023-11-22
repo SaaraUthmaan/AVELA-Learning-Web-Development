@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Goodbye, sorry you had to die
+    </title>
+    <style>
+        h3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    body {
+        background-color: beige;
+    }
+    #poem {
+        color:red;
+        font-family: Chiller, cursive
+    } 
+
+    #trick{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1vh;
+    }
+
+    #safe{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        height: 4vh;
+    }
+    #spirit{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 2vh;
+    }
+    #plan{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4vh;
+    }
+    #torch{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        height: 4vh;
+    }
+    #fav{
+        color: darkolivegreen;
+        font-family: serif;
+        font-size: 2ch;
+    }
+    #link1{
+        color: rgb(104, 19, 76);
+    }
+    #link2{
+        color: rgb(104, 19, 76);
+        margin: 1vh;
+    }
+    #link3{
+        color: rgb(104, 19, 76);
+        margin: 1vh;
+    }
+
+    </style>
+</head>
+<body>
+
+<h3>Reasons why we had to say goodbye</h3>
+<div id = poem>
+    <p id="die"></p>
+    <p id="trick"></p>
+    <p id="safe"></p>
+    <p id="spirit"></p>
+    <p id="plan"></p>
+    <p id="torch"></p>
+</div>
+<script>
+ /*This is a multiline comment.
+ If I declare the same variable twice that last assignation that 
+ I gave will be shown. An example can be seen below
+ */   
+var why = "Do you want to know why I got rid of you?";
+// Here is a one line comment
+var why = "I told you to run, and you didnt so I took action.";
+
+//Below will print the value assigned to the last why.
+document.getElementById("die").innerHTML = why;
+
+const hope = "You hoped I wouldn't take action," + " " +
+"but know you shouldn't have challenged me. ";
+
+document.getElementById("trick").innerHTML = hope;
+
+let death = "Forever you will be gone.";
+//since i put it in brackets the code can run but the things inside the 
+//brackets wont be ever seen online
+{
+    let death = "Let's burn them, who knows they might reincarnate."
+}
+//I cant run the code if I have two let with same naming
+document.getElementById("safe").innerHTML = death;
+
+var shield = "I shall shelter myself from your vengeful spirit.";
+let mind = "Your desire for revenge shall have never flourish!";
+const armor = "By the flame of my torch you shall be burned." ;
+
+document.getElementById("spirit").innerHTML = shield;
+document.getElementById("plan").innerHTML = mind;  
+document.getElementById("torch").innerHTML = armor;
+</script>
+<iframe 
+src="https://www.poetryfoundation.org/poems/46446/still-i-rise" width=550px height="800" style="border:2px solid black;" title="Poetry Foundation"; ></iframe>
+
+<p id = "fav">I inserts my favorite poet into the page because I aspire 
+   be able to write like her. I'm currently doing my research on her. 
+</p>
+<a href="" id="link1">Favorite poem</a>
+<a href="" id="link2">Favorite Website</a>
+<a href="" id="link3">Favorite Poem</a>
+<script>
+    // I wanted to be able to add a list of my favorite poems from 
+    // their websites but I dont know how to do the inclusion yet.
+    document.getElementById("link1").href = "https://www.google.com/search?gs_ssp=eJzj4tTP1Tcwyyg2NjZg9BLPz1AoyUhVKMhJTE4tVqjML1XPyVFIzwcAwvkLWg&q=oh+the+places+you%27ll+go&oq=oh+the+places+&gs_lcrp=EgZjaHJvbWUqBwgBEC4YgAQyBggAEEUYOTIHCAEQLhiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABNIBCDIwNTNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#ip=1"; 
+    document.getElementById("link2").href = "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" ;
+    document.getElementById("link3").href = "https://www.poetryfoundation.org/poems/44272/the-road-not-taken";
+</script>
+<p id="about"></p>
+<p id="funList"></p>
+<p id="answer"></p>
+<p id="learn"></p>
+<script>
+    alert("Enjoy learning about me");
+// Create an Array:
+// I wanted to learn how to code out lists of what the user did for fun.
+// I would do a prompt and not allow them to enter my website
+// Until they listed 5 things and at the end I would say
+// Wow you do all these fun things, with the list of the things 
+//they do under it.
+//Also how do you make space
+const enjoy = ["Coding","Archery", "Skating", "Writing","Badminton"];
+//enjoy[0] = "Reading";
+document.getElementById("about").innerHTML="I like to " + " " + enjoy + "whenever I find free time.";
+// Change an element:
+// Add an element:
+</script>
+<script>
+var reply = prompt("What do YOU do for fun?");
+document.getElementById("answer").innerHTML = "Wow! " + reply + " " + "sounds really fun.";
+// Display the Array:
+teach = "study,"
+document.getElementById("learn").innerHTML = "It was nice learning this fact about you!";
+var teach;
+</script>
+
+</body>
+</html>

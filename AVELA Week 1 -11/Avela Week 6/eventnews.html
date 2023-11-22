@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body onload="mymessage()" cursor: pointer; >
+<head>
+  <style>
+    h2 {
+      flex: display;
+      text-align: center;
+      cursor: pointer; /* Add a cursor pointer to indicate it's clickable */
+    }
+    img{
+      height: 500px;
+      width: 500px;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+    button{
+      text-align: center;
+    }
+    body{
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+  <h2 onmouseover="style.color='red'"
+  onmouseout="style.color='black'"
+  onclick="changeBackground()">
+  Summer Fun</h2>
+
+<p><strong>Registration for Events</strong></p>
+
+<p id = "name"></p>
+<p id="demo"></p>
+
+<script>
+function mymessage() {
+  alert("Welcome");
+}
+function changeBackground() {
+  document.body.style.backgroundColor = 'green';
+}
+//this allows the change to happen in the same place
+const userInput = prompt("Enter your name:");
+document.getElementById("name").textContent = `Name:` +" "+ userInput;
+</script>
+<p>The images below are one of the many things you will get to experience during your stay.</p>
+<p  onclick="innerHTML">Are you Ready??</p>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)">What's Behind Here?</div>
+  
+  <script>
+  function mDown(obj) {
+    obj.style.backgroundColor = "red";
+    obj.innerHTML = "HELP ME";
+  }
+  function mUp(obj) {
+    obj.style.backgroundColor="blue";
+    obj.innerHTML="Nothing Here";
+  }
+  function setOldImage() {
+    document.getElementById("imgchange").src ="dog.jpeg";
+  }
+  function setNewImage() {
+    document.getElementById("imgchange").src ="No.png";
+  }
+
+  </script>
+  <img id = "imgchange" src="No.png" alt="This is an image" title="This is an image"
+  onmouseover="setOldImage()" onmouseout="setNewImage()">
+  <script>
+    function redirectToEnd() {
+      window.location.href = 'end.html';
+    }
+    </script>
+  <button onmouseover="redirectToEnd()">The End</button>
+</body>
+</html>
+
+

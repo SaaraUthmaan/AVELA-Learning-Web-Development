@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href ="face.ico">
+  <title>Get a life</title>
+  <style>
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background-color:black;
+    }
+	.links  {
+  text-align: right;
+}
+.links a {
+  margin-right: 10px;
+}
+<!--
+  #center{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background-color:black;
+
+}-->
+	#whyStay{
+Color:Green;
+}
+  </style>
+</head>
+<body>
+<div class="links">
+<a onclick="location.href='index.html'" id="whyStay">Home</a>
+</div>
+<!--I know that every element can only have one ID but since js getelemenr 
+uses ID how can I chnage the color of the text of my page ? couldnt use this:
+document.getElementById('text').style.color="red" within script-->
+
+  <h1 style="color:white;" id="change" >GET LOST</h1>
+
+  <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<img id="pictureNew" src="cry.jpeg">
+
+<script>
+document.getElementById('pictureNew').src="happy.jpeg"
+
+</script>
+
+<button type="button" onclick="document.getElementById('change').style.fontSize='200px'">Click to Change Font Size</button>
+<button type="button" onclick="document.getElementById('change').innerHTML = 'Did I hurt your feelings?';">Click to Change Words</button>
+<button type="button" onclick="document.getElementById('change').style.display = 'none'">Click to get rid of Words</button>
+<button type="button" onclick="document.getElementById('change').style.display = 'block'">Click to get Words back</button>
+
+<!--id = "center"  why can't I add this in the block button before type if want 
+my words to continue to be centered.-->
+
+  
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+function showTomorrow2() {
+const date = new Date(2023, 07, 02);
+document.getElementById("aug2").innerHTML = date.toDateString();
+}
+function showTomorrow3() {
+const date = new Date(2023, 07, 03);
+document.getElementById("aug3").innerHTML = date.toDateString();
+}
+function showTomorrow4() {
+const date = new Date(2023, 07, 04);
+document.getElementById("aug4").innerHTML = date.toDateString();
+}
+function showTomorrow5() {
+const date = new Date(2023, 07, 05);
+document.getElementById("aug5").innerHTML = date.toDateString();
+}
+function showTomorrow6() {
+const date = new Date(2023, 07, 06);
+document.getElementById("aug6").innerHTML = date.toDateString();
+}
+function showTomorrow7() {
+const date = new Date(2023, 07, 07);
+document.getElementById("aug7").innerHTML = date.toDateString();
+}
+function showTomorrow8() {
+const date = new Date(2023, 07, 08);
+document.getElementById("aug8").innerHTML = date.toDateString();
+}
+function showTomorrow9() {
+const date = new Date(2023, 07, 09);
+document.getElementById("aug9").innerHTML = date.toDateString();
+}
+function showTomorrow10() {
+const date = new Date(2023, 07, 10);
+document.getElementById("aug10").innerHTML = date.toDateString();
+}
+function showTomorrow11() {
+const date = new Date(2023, 07, 11);
+document.getElementById("aug11").innerHTML = date.toDateString();
+}
+function showTomorrow12() {
+const date = new Date(2023, 07, 12);
+document.getElementById("aug12").innerHTML = date.toDateString();
+}
+function showTomorrow13() {
+const date = new Date(2023, 07, 13);
+document.getElementById("aug13").innerHTML = date.toDateString();
+}
+function showTomorrow14() {
+const date = new Date(2023, 07, 14);
+document.getElementById("aug14").innerHTML = date.toDateString();
+}
+function showTomorrow15() {
+const date = new Date(2023, 07, 15);
+document.getElementById("aug15").innerHTML = date.toDateString();
+}
+function showTomorrow16() {
+const date = new Date(2023, 07, 16);
+document.getElementById("aug16").innerHTML = date.toDateString();
+}

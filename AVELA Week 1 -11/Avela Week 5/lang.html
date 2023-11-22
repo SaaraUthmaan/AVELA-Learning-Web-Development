@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello human</title>
+</head>
+<body>
+<h4 id="blah">Welcome to CodeHub</h4>
+<button onclick="askLang()">Choose a Language</button>
+<p id="sorry"></p>
+<a href="" id="languageLink" target="_blank" ></a>
+<script>
+function askLang(){
+    var lang = prompt("What coding language do you want to study?");
+    if(lang !== null && lang.trim() !== ''){
+        if (lang.startsWith("HTML")) {
+            document.getElementById("languageLink").href = "https://www.w3schools.com/html/default.asp";
+            document.getElementById("languageLink").innerHTML = lang;
+        } else if (lang.startsWith("Javascript")) {
+            document.getElementById("languageLink").href = "https://www.w3schools.com/javascript/default.asp";
+            document.getElementById("languageLink").innerHTML = lang;
+        } else if (lang.startsWith("Java")) {
+            document.getElementById("languageLink").href = "https://www.w3schools.com/java/default.asp";
+            document.getElementById("languageLink").innerHTML = lang;
+        } else if (lang.startsWith("CSS")) {
+            document.getElementById("languageLink").href = "https://www.w3schools.com/css/default.asp";
+            document.getElementById("languageLink").innerHTML = lang;
+        } else if (lang.startsWith("SQL")) {
+            document.getElementById("languageLink").href = "https://www.w3schools.com/sql/default.asp";
+            document.getElementById("languageLink").innerHTML = lang;
+        } else if (lang.startsWith("Python")) {
+            document.getElementById("languageLink").href = "https://www.w3schools.com/python/default.asp";
+            document.getElementById("languageLink").innerHTML = lang;
+        } else if (lang.startsWith("PHP")) {
+            document.getElementById("languageLink").href = "https://www.w3schools.com/php/default.asp";
+            document.getElementById("languageLink").innerHTML = lang;
+        } else if (lang.startsWith("Bootstrap")) {
+            document.getElementById("languageLink").href = "https://www.w3schools.com/bootstrap/default.asp";
+            document.getElementById("languageLink").innerHTML = lang;
+        } else {
+            document.getElementById("sorry").innerHTML = "Sorry, this language is not available.";
+        }
+    }
+}
+</script>
+</body>
+</html>
+
+

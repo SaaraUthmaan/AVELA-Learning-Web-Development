@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Successful Surgery
+        </title>
+        <style>
+            h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body {
+            background-color: cadetblue;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+    </head>
+<body>
+
+<h2>Plastic Surgery</h2>
+
+<p>Last week I embarked on a self discovery journey, there I learned that change must be achieved in order for me to succed in life. 
+    I decided to take drastic measures and tranform who I am from inside out. My 
+    first stop was to my bestfriend's work place, Worchester's Surgery.    
+</p>
+
+<p id="me">
+    </p>
+    <img id="me" src="girl.jpeg" alt="Before Surgery">
+
+<p id="remake"></p>
+<img id="remake" src="richgirl.jpeg" alt="After Surgery">
+
+<script>
+// I say this to create an object
+const me= {type:"Tall",  backgroundColor:"poor", color:"black"};
+//I can change the properties but I cant change the object.
+me.color = "white";
+me.backgroundColor = "rich";
+me.type = "short";
+</script>
+<script>
+// Display the property and show my Transformation
+document.getElementById("me").innerHTML = "This was me before I left: I was a black girl from an unfortunate background, that towered over whoever she met. However, I slouched to avoid the stares.";
+document.getElementById("me").src="girl.jpeg";
+
+document.getElementById("remake").innerHTML = "As I exited the hospital, I felt empowered and transformed, finally I had broken free of the shell of my skin. I thought, finally, I will also have oppurtunties to succeed. Gone was the black girl, in her spot stood, a " + " " + me.backgroundColor + " " +
+ "blond girl" + " " + " " + "who lucky inherited her dead parents money appeared.";
+</script>
+<p>I continued on with my life, happy about the change I made until I came across the suddenly fashion trends that represented black people. 
+    Suddenly, black people were it and I wanted to who I was in the past. I ran to the hospital to reconnect with my friend who did my surgery.
+    However, to my everlastiing regert surgeries to change skin color were no longer proceeded with since the serum to active the change was lost.
+</p>
+<p>This discovery made me startle away from my sleep, I awoke taking a shakey breathe and looked at my sweat soaked skin,black. I breathed a sigh of releif happy that I didn't chnage who I am on the outside.
+    I threw the blanket aside and began my day with the goal of chnaging who I am in the inside so I could be successful. </p>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello human</title>
+</head>
+<body>
+<h4 id="blah">Welcome to CodeHub</h4>
+<button onclick="askLang()">Choose a Language</button>
+<a href="https://www.w3schools.com/js/default.asp" id="languageLink"></a>
+<script>
+function askLang(){
+    var lang = prompt("What coding language do you want to study?");
+    if(lang !== null && lang.trim() !== ''){
+        document.getElementById("languageLink").textContent = lang;
+    }
+}
+</script>
+</body>
+</html>

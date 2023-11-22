@@ -1,0 +1,63 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  /*I made the font thicker*/
+  font-weight: bolder;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #e5f6aa,#d243e2, #4de88e, rgb(198, 139, 67));
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 10px solid rgb(136, 39, 39);
+  outline: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .75);
+}
+/*When yoiu hover over the color that comes out*/
+.calculator-grid > button:hover {
+  background-color: rgba(71, 168, 74, 0.9);
+}
+/*The two larger piece how to make them that way*/
+.span-two {
+  grid-column: span 2;
+}
+/*The result box how it is made*/
+.output {
+  grid-column: 1 / -1;
+  border: 10px solid rgb(126, 18, 18);
+  background-color: rgba(185, 217, 222, 0.75);
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+/*The first input of equation when it goes to the top, the color it changes to
+and its size*/
+.output .previous-operand {
+  color: rgba(68, 15, 47, 0.75);
+  font-size: 1.5rem;
+}
+/*The second and end result its color and size*/
+.output .current-operand {
+  color: rgb(67, 142, 228);
+  font-size: 2.5rem;
+}

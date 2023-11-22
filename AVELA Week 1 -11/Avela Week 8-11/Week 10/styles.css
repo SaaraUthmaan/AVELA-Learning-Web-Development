@@ -1,0 +1,26 @@
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s;
+  background-color: aqua;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+.zoom:hover {
+  transform: scale(1.5); 
+}
+
+body{
+  background-color: green;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}

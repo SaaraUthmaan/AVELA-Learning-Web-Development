@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Operators and Arithmetic</h1>
+<p>All conditional operators can be used on both numbers and strings.</p>
+<p id="demo"></p>
+<p id="math"></p>
+<p id="math1"></p>
+<p id="math2"></p>
+<p id="math3"></p>
+<p id="math4"></p>
+<p id="math5"></p>
+<p id="math6"></p>
+<p id="math7"></p>
+<p id="math8"></p>
+<p id="math9"></p>
+<script>
+    // I will do section artimateic and operators here
+let text1 = 4;
+let text2 = 3;
+let result = text1 < text2;
+document.getElementById("demo").innerHTML = "Is A less than B? " + result;
+var me = "Yes"
+if (me !== "no") {
+    document.getElementById("math").innerHTML = "Yes is the value of me.";    
+}
+
+let a = 15;
+let x = (100 / 50) * a;
+let y = x + a
+let mod = (a + y) % 19
+document.getElementById("math1").innerHTML = y + mod;
+mod++
+document.getElementById("math2").innerHTML = y + mod;
+mod--
+document.getElementById("math3").innerHTML = y + mod;
+document.getElementById("math4").innerHTML = mod ** 15;
+document.getElementById("math5").innerHTML = Math.pow(mod,15);
+//As you can the last two results are the same
+let text = "What a very ";
+text += "nice day";
+text += "Hello" + 5
+//this is an example of concating
+document.getElementById("math6").innerHTML = text;
+
+if (5 > 10 || 7 < 3) {
+    document.getElementById("math7").innerHTML = "I am not free";
+  } else {
+    document.getElementById("math7").innerHTML = "I am free";
+  }
+// I dont understand bitwise operators
+//dont forget to say return inorder for the innerHTML to acces it
+function learn(a,y,u,w){
+    return a * y % u + w;
+}
+document.getElementById("math8").innerHTML = learn(4,5,10,13);
+
+</script>
+
+</body>
+</html>

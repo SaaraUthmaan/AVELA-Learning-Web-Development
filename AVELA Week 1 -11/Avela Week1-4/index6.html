@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('dog.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
+<script>
+function myImage() {
+	document.body.style.backgroundImage = "url('cat.jpeg')";
+}
+</script>
+
+
+</head>
+<body>
+
+<script>
+function myFunction() { 
+  document.getElementById("trans").innerHTML = "Hello, I'm JavaScript!";
+  document.getElementById("trans").style.fontSize = "25px";
+  document.getElementById("trans").style.color = "pink";
+  document.getElementById("trans").style.backgroundColor = "black";
+  document.getElementById("trans").style.textAlign = "center";
+}
+</script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+<p>I am lost, where am I?</p>
+<p id="trans">Today we will learn JavaScript.</p>
+<button type="button" onclick="myFunction()">Change text!</button>
+<p>I want my background picture to be a dog, but after a touch a button, I want it to become a cat.</p>
+<button type="button" onclick="myImage()">Change Image!</button>
+</body>
+</html>
+
